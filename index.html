@@ -1,0 +1,40 @@
+<script>
+function generateASCII() {
+  const input = document.getElementById('inputText').value;
+  const asciiOutput = document.getElementById('asciiOutput');
+  
+  // Simple ASCII art generation (for demonstration purposes)
+  const asciiArt = input.split('').map(char => {
+    if (char === ' ') return '   ';
+    return `
+     __
+    /  \\
+   |    |
+    \\__/
+    ${char}`;
+  
+    if (char === 'scratchblock') return '   ';
+    return `
+    /¯¯¯¯¯¯¯¯¯¯\_____/¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
+|                                                              |
+|                                                              |
+|                                                              |
+\__________            _______________/
+                    \_____/
+    ${char}`;
+  }).join('\n');
+  
+  asciiOutput.textContent = asciiArt;
+}
+</script>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+</style>
+<body>
+<h1>Scratch ASCII</h1>
+<p>Type your text below and see it transformed into ASCII art!</p>
+<input type="text" id="inputText" placeholder="Enter text here" oninput="generateASCII()">
+<pre id="asciiOutput"></pre>   
