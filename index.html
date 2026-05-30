@@ -12,16 +12,6 @@ function generateASCII() {
    |    |
     \\__/
     ${char}`;
-  
-    if (char === 'scratchblock') return 'sb1';
-    return `
-    /¯¯¯¯¯¯¯¯¯¯\_____/¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
-|                                                              |
-|                                                              |
-|                                                              |
-\__________            _______________/
-                    \_____/
-    ${char}`;
   }).join('\n');
   
   asciiOutput.textContent = asciiArt;
